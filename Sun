@@ -1,0 +1,30 @@
+def setup():
+    size(300,300)
+    
+def sun():
+    stroke(255,255,0)
+    fill(255,255,0)
+    
+    ellipseMode(CENTER)
+    ellipse(0,0,100,100)
+    
+    rectMode(CENTER)
+    rect(0,0,10,250)
+    
+    rotate(radians(45))
+    rect(0,0,250,10)
+    
+    rotate(radians(-45))
+    rect(0,0,250,10)
+    
+    rotate(radians(45))
+    rect(0,0,10,250)
+    
+x = 0
+def draw():
+    global x
+    background(255)
+    translate(width / 2, height / 2)
+    rotate(radians(x))
+    sun()
+    x += 1
