@@ -1,0 +1,14 @@
+sizeEll = 1600
+
+def setup():
+    size(1900, 710)
+    background(255)
+    
+def draw():
+    global sizeEll
+    translate(690, 355)
+    stroke(random(0,255), random(0,255), random(0,255))
+    ellipse(0,0, sizeEll, sizeEll)
+    sizeEll -= 1
+    if sizeEll <= 0:
+        noLoop()
