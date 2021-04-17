@@ -1,15 +1,13 @@
-c1=0
-c2=0
-c3=0
-c4=0
-c5=0
-c6=0
-w1=0
-w2=0
-w3=0
-w4=0
-w5=0
-w6=0
+c1=c2=c3=c4=c5=c6=0
+
+w1=w2=w3=w4=w5=w6=0
+
+h1=0
+h2=100
+h3=200
+h4=300
+h5=400
+h6=500
 
 def setup():
     size(1000,600)
@@ -20,12 +18,12 @@ def setup():
 def Countries():
     #Квадраты
     fill(0,100,255)
-    rect(0,0,w1,100)#Австралия
-    rect(0,100,w2,100)#Бразилия
-    rect(0,200,w3,100)#Китай
-    rect(0,300,w4,100)#Россия
-    rect(0,400,w5,100)#США
-    rect(0,500,w6,100)#Франция
+    rect(0,h1,w1,100)#Австралия
+    rect(0,h2,w2,100)#Бразилия
+    rect(0,h3,w3,100)#Китай
+    rect(0,h4,w4,100)#Россия
+    rect(0,h5,w5,100)#США
+    rect(0,h6,w6,100)#Франция
     #Текст
     fill(0)
     text(u"Австралия:  " + str(c1),10,60)
@@ -36,7 +34,7 @@ def Countries():
     text(u"Франция:  " + str(c6),10,560)
     
 def draw():
-    global c1,c2,c3,c4,c5,c6,w1,w2,w3,w4,w5,w6
+    global c1,c2,c3,c4,c5,c6,w1,w2,w3,w4,w5,w6,h1,h2,h3,h4,h5,h6
     background(255)
     Countries()
     
@@ -63,13 +61,9 @@ def draw():
         
     #Обнуление столбцов
     if w1 == width or w2 == width or w3 == width or w4 == width or w5 == width or w6 == width:
-       # w1=w2=w3=w4=w5=w6=0
         w1/=2
         w2/=2
         w3/=2
         w4/=2
         w5/=2
         w6/=2
-        
-   # print w
-    #print c1 ,c2 ,c3 ,c4 ,c5, c6
