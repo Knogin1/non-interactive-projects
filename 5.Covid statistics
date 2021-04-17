@@ -1,0 +1,75 @@
+c1=0
+c2=0
+c3=0
+c4=0
+c5=0
+c6=0
+w1=0
+w2=0
+w3=0
+w4=0
+w5=0
+w6=0
+
+def setup():
+    size(1000,600)
+    frameRate(60)
+    textSize(40)
+    strokeWeight(5)
+   
+def Countries():
+    #Квадраты
+    fill(0,100,255)
+    rect(0,0,w1,100)#Австралия
+    rect(0,100,w2,100)#Бразилия
+    rect(0,200,w3,100)#Китай
+    rect(0,300,w4,100)#Россия
+    rect(0,400,w5,100)#США
+    rect(0,500,w6,100)#Франция
+    #Текст
+    fill(0)
+    text(u"Австралия:  " + str(c1),10,60)
+    text(u"Бразилия:  " + str(c2),10,160)
+    text(u"Китай:  " + str(c3),10,260)
+    text(u"Россия:  " + str(c4),10,360)
+    text(u"США:  " + str(c5),10,460)
+    text(u"Франция:  " + str(c6),10,560)
+    
+def draw():
+    global c1,c2,c3,c4,c5,c6,w1,w2,w3,w4,w5,w6
+    background(255)
+    Countries()
+    
+    #Создание чисел для статистики
+    r = ceil(random(0,6))
+    if r == 1:
+        c1+=1
+        w1+=1
+    elif r == 2:
+        c2 +=1
+        w2+=1
+    elif r == 3:
+        c3 +=1
+        w3+=1
+    elif r == 4:
+        c4 +=1
+        w4+=1
+    elif r == 5:
+        c5+=1
+        w5+=1
+    else:
+        c6+=1
+        w6+=1
+        
+    #Обнуление столбцов
+    if w1 == width or w2 == width or w3 == width or w4 == width or w5 == width or w6 == width:
+       # w1=w2=w3=w4=w5=w6=0
+        w1/=2
+        w2/=2
+        w3/=2
+        w4/=2
+        w5/=2
+        w6/=2
+        
+   # print w
+    #print c1 ,c2 ,c3 ,c4 ,c5, c6
